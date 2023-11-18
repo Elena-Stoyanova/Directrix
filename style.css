@@ -1,0 +1,263 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffff;
+  font-family: Lato, sans-serif;
+}
+
+.lang-dropdown {
+  width: 50px;
+  position: absolute;
+  top: 11;
+  right: 240px;
+  z-index: 1;
+}
+
+.lang-open-icon {
+  position: absolute;
+  top: 1;
+  left: 25;
+}
+
+.lang-close-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 7;
+  left: 25;
+}
+
+.lang-container > a {
+  color: #1f1f1f;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.lang {
+  color: #fff;
+}
+
+.lang-container {
+  visibility: hidden;
+  opacity: 0;
+  width: 134px;
+  border-radius: 6px;
+  transition: all 0.3s;
+  background: #fff;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.15);
+  padding: 15px 10px;
+  position: absolute;
+  top: 30px;
+  left: -47;
+}
+
+.showLang .lang-container,
+.showLang .lang-close-icon {
+  visibility: visible;
+  opacity: 1;
+}
+
+.showLang .lang-open-icon {
+  visibility: hidden;
+  opacity: 0;
+}
+
+header {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 47px;
+  margin: auto;
+}
+
+.nav-bar {
+  width: 70%;
+  padding: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0px 2px 14px 0px rgba(249, 249, 249, 0.5);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 93%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.hero-title {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 30%;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  padding: 0 3%;
+  font-weight: 700;
+  line-height: 1.5em;
+}
+
+.line {
+  width: 24px;
+  height: 1px;
+  transform: rotate(90deg);
+  background-color: #d2d2d2;
+  margin: auto 0;
+}
+
+.menu-icon {
+  margin-right: 45px;
+}
+
+.menu-icon:hover,
+.close-menu-icon {
+  cursor: pointer;
+}
+
+.menu-text,
+.menu-line {
+  visibility: hidden;
+  opacity: 0;
+}
+hr {
+  border: #d3d3d3 1px solid;
+  margin: 7px 0;
+}
+.menu-text {
+  transition: all 0.3s;
+  color: #1f1f1f;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.15);
+  width: 182px;
+  padding: 15px 10px;
+  position: absolute;
+  top: 65px;
+  right: 82px;
+}
+
+.close-menu-icon {
+  display: none;
+}
+
+.showMenu .menu-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.showMenu .menu-line {
+  visibility: visible;
+  opacity: 1;
+}
+
+.showMenu .menu-icon {
+  display: none;
+}
+
+.showMenu .close-menu-icon {
+  display: inherit;
+  height: 24px;
+  margin-right: 45px;
+}
+
+.search-form {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.5s;
+  width: 56px;
+  height: 56px;
+  background: black;
+  filter: drop-shadow(0px 2px 14px rgba(0, 0, 0, 0.5));
+  border-radius: 55px;
+  padding: 5px;
+}
+
+.search-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  outline: 0;
+  border: 0;
+  display: none;
+  color: #ababab;
+  font-size: 14px;
+  border-radius: 55px;
+  padding: 0 20px;
+  background-color: black;
+}
+
+.search-icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.search-icon:hover {
+  cursor: pointer;
+}
+.search-close {
+  visibility: hidden;
+}
+
+.expandet form {
+  width: 200px;
+  border-radius: 6px 28px 28px 6px;
+  cursor: pointer;
+}
+
+.expandet div.search-close {
+  visibility: inherit;
+  width: 28px;
+  height: 28px;
+  background-color: white;
+  filter: drop-shadow(0px 2px 14px rgba(0, 0, 0, 0.5));
+  border-radius: 50%;
+  position: absolute;
+  left: -14;
+  top: 14px;
+}
+
+.expandet .close-icon {
+  position: fixed;
+  top: 5;
+  right: 6;
+}
+
+.expandet input {
+  display: block;
+}
+
+.where-title {
+  color: #212121;
+  font-size: 32px;
+  align-items: center;
+  margin-top: 400px;
+}
