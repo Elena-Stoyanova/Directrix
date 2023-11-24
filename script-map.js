@@ -96,22 +96,37 @@ function setMarkers(map) {
   });
 }
 
+function showInfoWindow(id) {
+  google.maps.event.trigger(newMarkers[id], 'click');
+}
+
 const activeFilters = [];
 
 function filterMarkers(category) {
+  let filterButton = document.querySelector(`.${category}`);
+
   if (activeFilters.includes(category)) {
     const index = activeFilters.indexOf(category);
     activeFilters.splice(index, 1);
+    filterButton.classList.remove('clicked');
   } else {
     activeFilters.push(category);
+    filterButton.classList.add('clicked');
   }
 
-  for (i = 0; i < newMarkers.length; i++) {
+  for (let i in newMarkers) {
     let marker = newMarkers[i];
     let filters = marker.filters;
+    let label = marker.label;
+    let location = document.getElementById(label);
 
+    location.classList.add('hide');
     const isVisible = activeFilters.every((f) => filters.includes(f));
     marker.setVisible(isVisible);
+
+    if (isVisible) {
+      location.classList.remove('hide');
+    }
   }
 }
 

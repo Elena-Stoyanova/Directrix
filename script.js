@@ -2,13 +2,16 @@ let showSearch = false;
 function showSearchForm() {
   let searchButton = document.querySelector('.search-container');
   let navBar = document.querySelector('.nav-bar');
+  let menuBar = document.querySelector('.menu-bar');
   showSearch = !showSearch;
   if (showSearch) {
     searchButton.classList.add('expandet');
     navBar.classList.add('expandet');
+    menuBar.classList.add('expandet');
   } else {
     searchButton.classList.remove('expandet');
     navBar.classList.remove('expandet');
+    menuBar.classList.remove('expandet');
   }
 }
 

@@ -308,14 +308,21 @@ hr {
   display: block;
 }
 
-.expandet .sign-up {
-  visibility: hidden;
-  opacity: 0;
+.expandet .menu-text {
+  right: 365px
 }
 
 .hidden {
-  visibility: hidden;
-  opacity: 0;
+  display: none;
+}
+
+@media screen and (max-width: 1319px) {
+  .expandet .search-form {
+    width: 200px;
+  }
+  .expandet .menu-text {
+    right: 235px
+  }
 }
 
 @media screen and (max-width: 1265px) {
@@ -324,6 +331,10 @@ hr {
     display: none;
   }
 
+  .nav-bar {
+    display: block;
+  }
+  
   .showMenu .footer-menu,
   .showMenu .magic {
     display: block;
@@ -332,6 +343,24 @@ hr {
   }
 }
 
+@media screen and (max-width: 1120px) {
+  .expandet .sign-up {
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+}
+@media screen and (max-width: 160px) {
+  .nav-bar a {
+    margin-right: 0
+  }
+}
+@media screen and (max-width: 943px) {
+  .expandet .where-header {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
 @media screen and (max-width: 900px) {
   .hero-img {
     object-fit: cover;
@@ -353,33 +382,36 @@ hr {
   .nav-bar a,
   .search-container,
   .header-line {
-    visibility: hidden;
-    opacity: 0;
+    display: none;
   }
 
   .nav-bar {
     width: 56px;
     height: 56px;
     position: absolute;
-    top: 33px;
+    top: 29px;
     right: 32px;
     filter: drop-shadow(0px 2px 14px rgba(0, 0, 0, 0.5));
   }
+
   .header-container {
     width: 56px;
     height: 56px;
   }
+
   .menu-icon {
-    margin: 15.4px;
+    margin: 16px;
   }
 
   .hidden {
     display: block;
   }
+
   .showMenu .close-menu-icon {
     height: 25px;
     margin: 15.5px;
   }
+
   .showMenu .menu-text {
     position: absolute;
     top: 80px;
@@ -391,18 +423,12 @@ hr {
 
   .showMenu .menu-text a,
   .showMenu.search-container {
-    visibility: visible;
-    opacity: 1;
+    display: block;
   }
 
   .showMenu .menu-line {
     width: 195px;
     margin: 7px auto;
-  }
-
-  .showMenu.hidden {
-    visibility: visible;
-    opacity: 1;
   }
 
   .hero-title {
@@ -431,6 +457,7 @@ hr {
     display: block;
     padding: auto 18px;
   }
+
   .search-close {
     display: none;
   }
@@ -441,13 +468,16 @@ hr {
     top: 490px;
     right: 120px;
   }
+
   .showMenu.lang-dropdown {
     visibility: visible;
     opacity: 1;
   }
+
   .lang {
     color: #1f1f1f;
   }
+
   .lang-open-icon path,
   .lang-close-icon path {
     fill: #1f1f1f;
@@ -470,32 +500,20 @@ hr {
     right: 20px;
     z-index: 1;
   }
-  .filter-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .map-container {
-    flex-direction: column;
-  }
-  .locatoin-title-container {
-    flex-direction: row;
-  }
-  .location-container {
-    align-items: center;
-  }
-  #map {
-    width: 400px;
-    height: 375px;
-    border-radius: 14px;
+
+  .hero-title {
+    margin-bottom: 45%;
   }
 }
 
 @media screen and (max-width: 375px) {
   .hero-img {
     object-fit: cover;
-    width: 375px;
     height: 648px;
   }
+  /* .hero-title {
+    margin-bottom: 10%;
+  } */
 }
 
 .where {
@@ -505,9 +523,10 @@ hr {
   align-items: center;
   gap: 40px;
   background-color: #f6f6f6;
-  margin-top: 40%;
-  padding: 80px 170px;
+  width: 90%;
+  padding: 80px;
 }
+
 .where-title {
   color: #212121;
   font-size: 32px;
@@ -520,61 +539,196 @@ hr {
   justify-content: space-around;
   gap: 36px;
 }
+
 .filter {
   border-radius: 4px;
   background-color: #fff;
   border: 1px solid #212121;
   position: relative;
 }
+
 .filter-title {
   margin: 9px 25px;
   font-size: 14px;
   font-weight: 700;
 }
+
 .filter-title1 {
   margin: 9px 0px;
   font-size: 14px;
   font-weight: 700;
 }
+
 .filter-circle {
   position: absolute;
-  top: 7px;
+  top: 5px;
   right: 90%;
 }
+
+.filter-circle circle {
+  fill: rgb(71, 71, 71);
+}
+
+.webDesign.clicked,
+.frontEnd.clicked,
+.backEnd.clicked,
+.consultations.clicked,
+.branding.clicked {
+  fill: black;
+}
+
 .map-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   gap: 48px;
 }
+
 #map {
   width: 700px;
   height: 475px;
   border-radius: 14px;
 }
+
 .location-container {
   display: flex;
   flex-direction: column;
   gap: 17px;
 }
+
 .choose-location {
   font-size: 20px;
 }
+
 .location-line {
   width: 96px;
   height: 1px;
   background: #000;
 }
-.locatoin-title-container {
+
+.location-title-container {
   margin-top: 7px;
   display: flex;
   flex-direction: column;
   gap: 30px;
   font-size: 16px;
   font-weight: 700;
+  max-height: 280px;
+  overflow-y: scroll;
 }
 
-.location-title,
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #cbcbcb;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+.location-title-container p,
 .filter {
   cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  align-items: center;
+}
+@media screen and (min-width: 1110px) {
+  .where {
+    margin: 30% auto 0 auto;
+  }
+}
+@media screen and (max-width: 1109px) {
+  .filter-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #map {
+    width: 400px;
+    height: 400px;
+  }
+
+  .location-title-container {
+    width: 100px;
+  }
+
+  .where {
+    margin: 20% auto 0 auto;
+  }
+}
+
+@media screen and (max-width: 676px) {
+  .hero-title {
+    margin-bottom: 55%;
+  }
+}
+
+@media screen and (max-width: 631px) {
+  .filter-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #map {
+    width: 300px;
+    height: 400px;
+  }
+
+  .where {
+    width: 100%;
+    margin: 0;
+  }
+
+  .where-title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 498px) {
+  .map-container {
+    flex-direction: column;
+  }
+
+  #map {
+    width: 100%;
+    height: 300px;
+  }
+  .location-title-container {
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+  .location-container {
+    align-items: center;
+  }
+
+  .location-line {
+    width: 240px;
+  }
+
+  .location-title-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .location-title-container p {
+    text-align: center;
+  }
+
+  .where-title {
+    text-align: center;
+  }
 }

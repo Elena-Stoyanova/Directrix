@@ -79,8 +79,8 @@
       </svg>
       <div class="nav-bar">
         <a href="#beginning">Начало</a>
-        <a href="#magic">Магията</a>
-        <a href="#where">Къде?</a>
+        <a class="magic" href="#magic">Магията</a>
+        <a class="where-header" href="#where">Къде?</a>
         <a class="sign-up" href="#sign-up">Запиши се</a>
         <a class="footer" href="#footer">Футър</a>
         <div class="header-container">
@@ -210,7 +210,7 @@
                 viewBox="0 0 24 24"
                 fill="none"
               >
-                <circle cx="12" cy="12" r="12" fill="black" />
+                <circle class="webDesign" cx="12" cy="12" r="12" fill="black" />
               </svg>
               <p class="filter-title">Уебдизайн</p>
             </div>
@@ -223,7 +223,7 @@
                 viewBox="0 0 24 24"
                 fill="none"
               >
-                <circle cx="12" cy="12" r="12" fill="black" />
+                <circle class="frontEnd" cx="12" cy="12" r="12" fill="black" />
               </svg>
               <p class="filter-title">Фронт енд</p>
             </div>
@@ -236,7 +236,7 @@
                 viewBox="0 0 24 24"
                 fill="none"
               >
-                <circle cx="12" cy="12" r="12" fill="black" />
+                <circle class="backEnd" cx="12" cy="12" r="12" fill="black" />
               </svg>
               <p class="filter-title">Бек енд</p>
             </div>
@@ -249,7 +249,13 @@
                 viewBox="0 0 24 24"
                 fill="none"
               >
-                <circle cx="12" cy="12" r="12" fill="black" />
+                <circle
+                  class="consultations"
+                  cx="12"
+                  cy="12"
+                  r="12"
+                  fill="black"
+                />
               </svg>
               <p class="filter-title">Консултации</p>
             </div>
@@ -262,7 +268,7 @@
                 viewBox="0 0 24 24"
                 fill="none"
               >
-                <circle cx="12" cy="12" r="12" fill="black" />
+                <circle class="branding" cx="12" cy="12" r="12" />
               </svg>
               <p class="filter-title">Брандинг</p>
             </div>
@@ -276,13 +282,19 @@
             <div class="location-container">
               <h3 class="choose-location">Избери локация</h3>
               <div class="location-line"></div>
-              <div class="locatoin-title-container">
-                <p class="location-title">Локация 1</p>
-                <p class="location-title">Локация 2</p>
-                <p class="location-title">Локация 3</p>
-                <p class="location-title">Локация 4</p>
-                <p class="location-title">Локация 5</p>
-                <p class="location-title">Локация 6</p>
+              <div class="location-title-container">
+                <p onclick="showInfoWindow(0)" id="1">Локация 1</p>
+                <p onclick="showInfoWindow(1)" id="2">Локация 2</p>
+                <p onclick="showInfoWindow(2)" id="3">Локация 3</p>
+                <p onclick="showInfoWindow(3)" id="4">Локация 4</p>
+                <p onclick="showInfoWindow(4)" id="5">Локация 5</p>
+                <p onclick="showInfoWindow(5)" id="6">Локация 6</p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
               </div>
             </div>
           </div>
