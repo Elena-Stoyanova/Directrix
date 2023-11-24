@@ -158,7 +158,7 @@ a {
 .header-container {
   position: absolute;
   top: 0px;
-  right: 0px;
+  right: -1px;
   display: flex;
   flex-direction: row;
   border-radius: 28px;
