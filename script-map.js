@@ -51,6 +51,30 @@ const locations = [
     title: 'Локация 6',
     filters: ['webDesign', 'frontEnd'],
   },
+  {
+    position: {
+      lat: 42.697190,
+      lng: 23.284893,
+    },
+    title: 'Локация 7',
+    filters: ['webDesign', 'branding'],
+  },
+  {
+    position: {
+      lat: 42.703231,
+      lng: 23.308454,
+    },
+    title: 'Локация 8',
+    filters: ['backEnd', 'consultations'],
+  },
+  {
+    position: {
+      lat: 42.698625,
+      lng: 23.336997,
+    },
+    title: 'Локация 9',
+    filters: ['frontEnd', 'consultations'],
+  },
 ];
 
 function initMap() {
@@ -65,9 +89,9 @@ function initMap() {
 function setMarkers(map) {
   const infoWindow = new google.maps.InfoWindow();
   const image = {
-    url: './ellipse.png',
-    size: new google.maps.Size(30, 32),
-    origin: new google.maps.Point(-12, -8),
+    url: './location1.png',
+    size: new google.maps.Size(30, 30),
+    origin: new google.maps.Point(0, 0),
     anchor: new google.maps.Point(0, 0),
   };
 
@@ -81,7 +105,7 @@ function setMarkers(map) {
       position,
       map,
       filters,
-      icon: image,
+      // icon: image,
       shape: shape,
       title,
       label: `${i + 1}`,
